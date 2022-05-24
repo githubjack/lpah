@@ -9,7 +9,7 @@ import {
   Whoops404,
   Services,
   CompanyHistory,
-  Location,
+  Delivery,
 } from './pages';
 
 export default function App() {
@@ -20,9 +20,9 @@ export default function App() {
         <Route path="/about" element={<About />}>
           <Route path="services" element={<Services />} />
           <Route path="history" element={<CompanyHistory />} />
-          <Route path="location" element={<Location />} />
+          <Route path="delivery" element={<Delivery />} />
         </Route>
-        <Route path="/events" element={<Hire />} />
+        <Route path="/hire" element={<Hire />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Whoops404 />} />
       </Routes>

@@ -37,6 +37,7 @@ export function Services() {
       <Link to="/about/history">Company History</Link>
       <Link to="/about/location">Location</Link>
       <Link to="/about">Back to About</Link>
+      <Link to="/">Home </Link>
     </nav>
     </div>
   );

@@ -1,5 +1,7 @@
 import * as React  from 'react';
-import { Link, useLocation, Outlet } from 'react-router-dom'
+import { Link, useLocation, Outlet } from 'react-router-dom';
+import './hero-grid.css';
+
 
 export function Hero() {
   return (

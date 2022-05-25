@@ -1,8 +1,104 @@
-h1, p {
-  font-family: Lato;
+*,
+*::before,
+*::after{
+  margin:0;
+  padding:0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400&family=Rubik:wght@300;400;900&display=swap');
+body{
+  font-family: 'Karla', sans-serif;
+  font-size:16px;
+}
+h1, h2, h3, h4{
+  font-family: 'Rubik', sans-serif;
 }
 .small-print{
-  font-size:9px;
+  font-size:8px;
   padding:0 0.5em;
   text-transform: uppercase;
+}
+/*
+top level component stacking context
+*/
+
+.container{
+  width:100%;
+}
+
+/*
+header component
+*/
+.header{
+  background-color:#ffffff;
+  display:flex;
+  justify-content: space-between;
+  padding:0.5em;
+  position:sticky;
+  top:0;
+  width: calc(100% - 1em);
+}
+.sub-header{
+  display:flex;
+  justify-content: flex-end;
+
+}
+.logo{
+  flex:.4;
+  min-height:38px;
+}
+.navbar{
+ flex:.6;
+ align-items: center;
+ min-height:38px;
+}
+.routes{
+  display:flex;
+}
+.navbar .routes{
+  justify-content: flex-end;
+  height: 100%;
+  align-items: center;
+}
+.header .routes a,
+.sub-header .routes a{
+  text-decoration: none;
+  padding-block:0 0.25em;
+  padding-inline:0.35em;
+  display: block;
+}
+.header .routes a{
+  font-size:.7rem;
+  color:rgba(0,0,0,.5)
+}
+
+.header .routes a:active,
+.header .routes a:focus{
+  font-weight:400;
+}
+.header .routes a span.active{
+  /*border-bottom:1px solid rgb(167, 162, 162);*/
+  font-weight: 600;
+}
+.sub-header .routes a{
+  font-size:.8rem;
+  font-weight: 600;
+  color: rgba(0,0,0,.9)
+}
+
+
+
+
+/*
+hero component and Outlet component
+*/
+
+.hero{
+  display:flex;
+  padding:0.5em;
+  width: calc(100% - 1em);
+  background-color:#f5f5f5;
+  height:100vh;
+}
+.hero-grid {
+  display:grid;
 }
